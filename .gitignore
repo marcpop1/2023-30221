@@ -1,0 +1,19 @@
+# Ignore compiled Java classes and JAR files
+*.class
+*.jar
+
+# Ignore IntelliJ IDEA files
+.idea/
+
+# Ignore Eclipse files
+.classpath
+.project
+.settings/
+
+# Ignore generated files and folders
+bin/
+target/
+
+# Ignore operating system files
+.DS_Store
+Thumbs.db
