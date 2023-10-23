@@ -17,3 +17,6 @@ target/
 # Ignore operating system files
 .DS_Store
 Thumbs.db
+
+# Ignore VS Code files
+.vscode
