@@ -55,6 +55,33 @@ public class Main { //can be abstract, final, or empty
         System.out.println(fourthPhone.volume);
         fourthPhone.isLocked = true;
         System.out.println(fourthPhone.isLocked);
+
+        //
+        //pokemon1 -> obj name/ var name
+        //
+        Pokemon pokemon0 = new Pokemon();
+        pokemon0.name = "Bulbasaur";
+        pokemon0.type = "Grass";
+        pokemon0.health = 100;
+        pokemon0.level = 1;
+        System.out.println("\n" + pokemon0.name + " has level: " + pokemon0.level);
+        pokemon0.attak();
+        
+        Pokemon pokemon1 = new Pokemon("Pikachu", "Electric", 100, 1);
+        pokemon1.name = "Pikachuuuu";
+        pokemon1.pokemonInfo();
+        pokemon1.level = 10;
+
+
+
+        System.out.println("Pokemon name: " + pokemon1.name);
+        System.out.println("Pokemon type: " + pokemon1.type);
+        System.out.println("Pokemon health: " + pokemon1.health);
+        System.out.println("Pokemon level: " + pokemon1.level);
+        Pokemon pokemon2 = new Pokemon("Charmander", "Fire", 100, 1);
+        pokemon2.pokemonInfo();
+        pokemon1.attackPokemon(pokemon2);
+
     }
 
     public static void doSmth(Phone phone) {
