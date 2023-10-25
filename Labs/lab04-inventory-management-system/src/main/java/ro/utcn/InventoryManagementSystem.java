@@ -1,4 +1,9 @@
-package ro.utcn.model;
+package ro.utcn;
+
+import ro.utcn.model.Customer;
+import ro.utcn.model.MostBoughtProduct;
+import ro.utcn.model.Order;
+import ro.utcn.model.Product;
 
 public class InventoryManagementSystem {
 
