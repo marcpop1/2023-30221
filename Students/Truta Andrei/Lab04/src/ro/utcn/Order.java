@@ -10,6 +10,13 @@ public class Order {
     List<Product> productList = new ArrayList<Product>();
     List<Integer> productQuantity = new ArrayList<Integer>();
 
+    static Integer lastId = -1;
+
+    static Integer getNextId() {
+        lastId++;
+        return lastId;
+    }
+
     public Order(Integer id) {
         this.id = id;
     }
@@ -22,21 +29,6 @@ public class Order {
             productQuantity.set(productList.indexOf(product), productQuantity.get(productList.indexOf(product)) + quantity);
         }
     }
-
-    //TODO: Can't access Inventory unless static but a singleton inventory seems a bit limiting, what if
-    //TODO: I want to have multiple stores?
-//    public void addProduct(String name, Integer quantity) {
-//        for (int i = 0; i < Inventory.getProductList().size(); i++) {
-//            if (Inventory.productList.get(i).getName().equals(name)) {
-//                if (productList.indexOf(Inventory.productList.get(i)) == -1) {
-//                    productList.add(Inventory.productList.get(i));
-//                    productQuantity.add(quantity);
-//                } else {
-//                    productQuantity.set(productList.indexOf(Inventory.productList.get(i)), productQuantity.get(productList.indexOf(Inventory.productList.get(i))) + quantity);
-//                }
-//            }
-//        }
-//    }
 
     public void getDetails() {
         System.out.println("Order id: " + id);

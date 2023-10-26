@@ -11,6 +11,13 @@ public class Customer {
     private String phone;
     private List<Order> placedOrders = new ArrayList<Order>();
 
+    static Integer lastId = -1;
+
+    static Integer getNextId() {
+        lastId++;
+        return lastId;
+    }
+
     public Customer(Integer id, String name, String address, String email, String phone) {
         this.id = id;
         this.name = name;
@@ -20,15 +27,17 @@ public class Customer {
     }
 
     public void getDetails() {
-        System.out.println("Customer: " + name);
-        System.out.println("Address: " + address);
-        System.out.println("Email: " + email);
-        System.out.println("Phone: " + phone);
-        System.out.println("Id: " + id);
-        System.out.println("Orders: ");
+        System.out.println("Customer: ");
+        System.out.println("\tName: " + name);
+        System.out.println("\tAddress: " + address);
+        System.out.println("\tEmail: " + email);
+        System.out.println("\tPhone: " + phone);
+        System.out.println("\tId: " + id);
+        System.out.println("\tOrders: ");
         for (int i = 0; i < placedOrders.size(); i++) {
+            //TODO: Needs \t\t for each order so do this manually instead of calling method
             placedOrders.get(i).getDetails();
-            System.out.println();;
+            System.out.println();
 
         }
     }
