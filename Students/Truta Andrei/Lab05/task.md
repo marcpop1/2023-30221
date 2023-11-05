@@ -27,5 +27,5 @@ You are tasked with designing a UML class diagram for a basic banking system. Th
 
 - Establish a dependency relationship from the `Transaction` class to the `Bank Account` class to indicate that transactions depend on account information.
 
-### Main Class:
+### ro.utcn.Main Class:
 - In the main class, demonstrate how customers can create accounts, make transactions (deposits, withdrawals, transfers), and view their account balances.

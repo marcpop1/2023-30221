@@ -1,7 +1,7 @@
+package ro.utcn;
+
 import ro.utcn.BankAccount;
 import ro.utcn.Customer;
-
-import java.sql.SQLOutput;
 
 public class Main {
     public static void main(String[] args) {
@@ -10,22 +10,23 @@ public class Main {
         c1.openAccount(BankAccount.AccountType.CURRENT);
         c1.depositCurrency(0, 100.0);
         c1.withdrawCurrency(0, 50.0);
-        //System.out.println(c1.getBalance(0));
+        System.out.println(c1.getBalance(0));
 
         c1.openAccount(BankAccount.AccountType.SAVINGS);
         c1.depositCurrency(1, 75.0);
-        //System.out.println(c1.getBalance(1));
+        System.out.println(c1.getBalance(1));
 
-        //c1.transferInternalCurrency(0, 1, 25.0);
-        //System.out.println(c1.getBalance(0));
-        //System.out.println(c1.getBalance(1));
+        c1.transferInternalCurrency(0, 1, 25.0);
+        System.out.println(c1.getBalance(0));
+        System.out.println(c1.getBalance(1));
 
-        Customer c2 = new Customer("Jane Doe", "Cluj-Napoca", "hi@yahoo.com", "0740123456");
+        Customer c2 = new Customer("Jane Dee", "Cluj-Napoca", "hi@yahoo.com", "0740123456");
         c2.openAccount(BankAccount.AccountType.CURRENT);
 
         c1.transferExternalCurrency(0, c2, 2, 25.0);
-        System.out.println(c1.getBalance(0));
-        System.out.println(c2.getBalance(2));
+        System.out.println(c1.getName() + " has " + c1.getBalance(0) + " in account 0");
+        System.out.println(c2.getName() + " has " + c2.getBalance(2) + " in account 2");
+
 
     }
 }

@@ -2,10 +2,11 @@ package ro.utcn;
 
 public class Transaction {
     public static enum TransactionType {
-        DEPOSIT, WITHDRAWAL, TRANSFER
+        DEPOSIT, WITHDRAWAL, TRANSFER_IN, TRANSFER_OUT
     }
+
     private Integer id;
-    private BankAccount sourceAccount;;
+    private BankAccount sourceAccount;
     private BankAccount destinationAccount;
     private TransactionType transactionType;
     private Double amount;
@@ -17,5 +18,14 @@ public class Transaction {
         this.transactionType = transactionType;
         this.amount = amount;
         this.representative = representative;
+    }
+
+
+    public TransactionType getTransactionType() {
+        return this.transactionType;
+    }
+
+    public Double getAmount() {
+        return this.amount;
     }
 }
