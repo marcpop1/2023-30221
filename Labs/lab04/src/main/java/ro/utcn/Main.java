@@ -1,17 +1,16 @@
 package ro.utcn;
 
+import ro.utcn.outside.Company;
+
 public class Main {
 
   public static void main(String[] args) {
     System.out.println("Hello world!");
 
-//    Person person = new Person("Something");
-//    System.out.println(person.getName());
-//    person.setName("Bondor");
-//    System.out.println(person.getName());
-//    person.setName("Alex");
-//    System.out.println(person.getName());
-
     Person person = Person.getInstance();
+    person.setAge(10);
+    System.out.println(person.getName());
+
+    new Company();
   }
 }

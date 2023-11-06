@@ -2,13 +2,19 @@ package ro.utcn.model;
 
 public class Order {
 
-  private Long id;
-  private Customer customer;
-  private Product[] products;
+  public Long id;
+  protected Product[] products;
   private Long[] quantities;
   private int productIndex = 0;
 
-  public Order(Long id) {
+  public Order() {
+
+  }
+
+  public Order(Customer customer) {
+    if (bannedCustomerNames.contains(customer.getName())) {
+      //..
+    }
     products = new Product[10];
     quantities = new Long[10];
   }
@@ -23,6 +29,10 @@ public class Order {
 
   public Customer getCustomer() {
     return customer;
+  }
+
+  protected Invoice[] generateInvoice(Invoice invoice, Customer customer) {
+
   }
 
   public void setCustomer(Customer customer) {
