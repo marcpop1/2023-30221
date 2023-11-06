@@ -20,7 +20,7 @@ public class Inventory {
             if (p.getProductID().equals(product.getProductID())) {
                 if (p.getStockQuantity() >= quantity) {
                     System.out.println("Sold: " + p.getName());
-                    order.addProductToOrder(order, product, quantity);
+                    order.addProductToOrder(product, quantity);
                 } else {
                     System.out.println("The current stock is lower than the solicited quantity. Currently in stock:" + product.getStockQuantity());                }
             }
