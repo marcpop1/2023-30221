@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.List;
+
 class BankAccount {
     private int accountNumber;
     private String accountType;
@@ -10,14 +11,10 @@ class BankAccount {
     public int getAccountNumber() {
         return accountNumber;
     }
-    public String getAccountType() {
-        return accountType;
-    }
+
     public double getBalance() {
         return balance;
     }
-
-
 
 
     public BankAccount(int accountNumber, String accountType) {
@@ -54,6 +51,4 @@ class BankAccount {
     public List<Transaction> getTransactions() {
         return transactions;
     }
-
-    // Additional getters for account attributes
 }

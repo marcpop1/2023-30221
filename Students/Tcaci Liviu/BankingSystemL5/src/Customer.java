@@ -17,10 +17,4 @@ class Customer {
     public void addAccount(BankAccount account) {
         accounts.add(account);
     }
-
-    public List<BankAccount> getAccounts() {
-        return accounts;
-    }
-
-    // Additional getters and setters for customer attributes
 }
