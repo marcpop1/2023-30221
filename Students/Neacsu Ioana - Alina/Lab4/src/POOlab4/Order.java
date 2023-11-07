@@ -44,7 +44,7 @@ public class Order {
     public void updateAmount(int amount){
         orderAmount += amount;
     }
-    public void addProductToOrder(Order order, Product product, int quantity) {
+    public void addProductToOrder( Product product, int quantity) {
         boolean found = false;
         if (product.getStockQuantity() >= quantity) { //checking product quantity is >= than needed quantity
             for (OrderItem item : orderList) { //searching if item is already in list
@@ -57,7 +57,7 @@ public class Order {
                 OrderItem newItem = new OrderItem(product, quantity);
                 orderList.add(newItem); //adding new orderItem to the list
             }
-            order.updateAmount(quantity); //updating order amount
+            this.updateAmount(quantity); //updating order amount
             product.updateQuantity(quantity); //updating product stock
         } else {
             System.out.println("The current stock is lower than the solicited quantity. Currently in stock:" + product.getStockQuantity());
