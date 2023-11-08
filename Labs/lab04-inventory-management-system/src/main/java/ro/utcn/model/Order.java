@@ -7,14 +7,13 @@ public class Order {
   private Long[] quantities;
   private int productIndex = 0;
 
+  private Customer customer;
+
   public Order() {
 
   }
 
   public Order(Customer customer) {
-    if (bannedCustomerNames.contains(customer.getName())) {
-      //..
-    }
     products = new Product[10];
     quantities = new Long[10];
   }
