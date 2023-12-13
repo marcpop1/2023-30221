@@ -6,6 +6,28 @@ import java.sql.SQLException;
 
 public class Main {
 
+  /**
+   * Create a class User with the following private fields:
+   * - id: Long
+   * - firstName: String
+   * - lastName: String
+   * - email: String
+   * - password: String
+   *
+   * Don't store the password in plain text. Use a hashing algorithm.
+   * Create a method to check if email & password is valid.
+   * The method should have the following signature:
+   * - isValid(email: String, password: String): boolean
+   *
+   * Create a class UserRepository with the following public methods:
+   * - save(user: User): User
+   * - findById(id: Long): User
+   * - findByEmail(email: String): User
+   * - update(user: User): User
+   * - deleteById(id: Long): void
+   *
+   * @param args
+   */
   public static void main(String[] args) {
     // JDBC URL, username, and password of MySQL server
     String url = "jdbc:mysql://localhost:3306/your_database_name";
